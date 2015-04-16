@@ -1,0 +1,18 @@
+<%= form_tag('/auth', method: 'post') do  %>
+  <div class="container">
+    <div class="row">
+      <div class = "col-md-12">
+        <div class="container login-container" id="formContainer">
+          <h3 class="form-signin-heading">Login</h3>
+          <%= text_field_tag :username, nil, :class => 'form-control', :placeholder => 'Username'  %>
+          <br/>
+          <%= password_field_tag :password, nil, :class => 'form-control', :placeholder => 'Password' %>
+          <br/>
+          <%= submit_tag "Login", :class => 'btn btn-lg btn-primary btn-block' %>
+        </div> <!-- /container -->
+      </div>
+    </div>
+  </div>
+<% end %>
+
+

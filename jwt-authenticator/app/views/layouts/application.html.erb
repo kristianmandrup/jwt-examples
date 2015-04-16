@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Posters</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="#">Json Web Authentication <span class="sr-only">(current)</span></a></li>
+      <% if @current_user %>
+        <li><%= link_to 'Posts', posts_path %></li>
+        <li> <%= link_to "Welcome #{ @current_user.username }" %></li>
+        <li> <%= link_to "Logout", logout_path %></li>
+      <% else %>
+        <li><%= link_to 'Login', root_path %></li>
+      <% end %>
+  </ul>
+</nav>
+<%= yield %>
+
+</body>
+</html>
