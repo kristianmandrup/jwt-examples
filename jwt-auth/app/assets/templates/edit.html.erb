@@ -1,0 +1,12 @@
+<div class = container>
+  <div class = "row">
+    <div class = "col-md-12">
+      <div class="container login-container" id="formContainer">
+        <h3>Edit Your Post for Id : {{ $root.post.id}}</h3>
+         Title : <input type = "text" name = "post_title" class="form-control" ng-model = "post.title" value = "{{ $root.post.title}}">
+         <br/>
+         <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="update($root.post.id)">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

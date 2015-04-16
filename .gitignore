@@ -1,2 +1,9 @@
-jwt-node-auth-demo/node_modules
+.node_modules
 .DS_Store
+
+# Ignore bundler config.
+bundle/
+
+# Ignore all logfiles and tempfiles.
+log/
+tmp/

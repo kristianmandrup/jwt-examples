@@ -1,0 +1,16 @@
+<div class = "alert alert-warning alert-dismissible" role="alert" > {{message}} </div>
+<div class="container">
+  <div class="row">
+    <div class = "col-md-12">
+      <div class="container login-container" id="formContainer">
+        <h3 class="form-signin-heading">Sign In</h3>
+        <input type="text" class="form-control" name="loginEmail" id="loginEmail" placeholder="Email address" required autofocus ng-model="user.email">
+        <br/>
+        <input type="password" class="form-control" name="loginPass" id="loginPass" placeholder="Password" required ng-model="user.password">
+        <br/>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="signin()">Sign in</button>
+        Not a user yet? <a href = "/signup">Click Here</a> for Signup
+      </div> <!-- /container -->
+    </div>
+  </div>
+</div>
